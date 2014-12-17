@@ -1,0 +1,52 @@
+/*   
+Theme Name: minimal-wp
+Theme URI: http://wordpress.wesleymiller.com/
+Description: A WordPress theme framework.
+Author: Wesley Miller
+Author URI: http://wesleymiller.com/
+Version: 1.0
+*/
+
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.alignleft, img.alignleft {display:inline;float:left;margin:0 10px 10px 0;}
+.alignright, img.alignright {display:inline;float:right;margin:0 0 10px 10px;}
+.aligncenter, img.aligncenter {clear:both;display:block;margin:5px auto;}
+.wp-caption {text-align:center;}
+.wp-caption img {border:0 none;margin:0;padding:0;}
+.wp-caption p.wp-caption-text {font-size:.85em;margin:0;}
+.wp-smiley {max-height:1em;margin:0 !important;}
+.gallery-caption {font-size:.85em;margin:5px 0 0 0;}
+.gallery {margin:20px auto;overflow:hidden;width:100%;}
+.gallery .gallery-item {float:left;text-align:center;}
+.gallery-item a img {max-width:100% !important;}
+.gallery-columns-2 .gallery-item {margin:1%;width:48%;}
+.gallery-columns-3 .gallery-item {margin:1%;width:31.33%;}
+.gallery-columns-4 .gallery-item {margin:1%;width:23%;}
+.gallery-columns-5 .gallery-item {margin:1%;width:18%;}
+.gallery-columns-6 .gallery-item {margin:1%;width:14.66%;}
+.gallery-columns-7 .gallery-item {margin:1%;width:12.2%;}
+.gallery-columns-8 .gallery-item {margin:1%;width:10.5%;}
+.gallery-columns-9 .gallery-item {margin:1%;width:9.11%;}
+#wp-calendar {margin:20px auto;text-align:center;width:75%;}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 0px) {
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 480px) {
+}
+/* Small Tablet (portrait) ----------- */
+@media only screen and (min-width : 600px) {
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) {
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 1024px) {
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1280px) {
+}
+/* Large screens ----------- */
+@media only screen and (min-width : 1440px) {
+}
