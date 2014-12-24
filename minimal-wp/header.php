@@ -16,8 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<?php wp_enqueue_script("jquery"); ?>
 	<?php wp_head(); ?>
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php printf( __( '%s latest posts', 'mammoth' ), esc_html( get_bloginfo('name'), 1 ) ); ?>" />
-	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'mammoth' ), esc_html( get_bloginfo('name'), 1 ) ); ?>" />
+	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php printf( __( '%s latest posts', 'minimal-wp' ), esc_html( get_bloginfo('name'), 1 ) ); ?>" />
+	<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'minimal-wp' ), esc_html( get_bloginfo('name'), 1 ) ); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />	
 </head>
 <body <?php body_class(); ?>>

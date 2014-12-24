@@ -6,7 +6,7 @@
 		if ( ! empty($post->post_password) ) :
 		if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
 	?>
-	<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'mammoth') ?></div>
+	<div class="nopassword"><?php _e('This post is password protected. Enter the password to view any comments.', 'minimal-wp') ?></div>
 	<?php
 		return;
 		endif;
@@ -20,7 +20,7 @@
         ?>
         <?php if ( ! empty($comments_by_type['comment']) ) : ?>
             <div class="comments-list">
-                <h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'mammoth') : __('<span>One</span> Comment', 'mammoth'), $comment_count) ?></h3>
+                <h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'minimal-wp') : __('<span>One</span> Comment', 'minimal-wp'), $comment_count) ?></h3>
                 <?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>
                 <nav id="comments-nav-above" class="comments-navigation">
                     <div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
@@ -38,7 +38,7 @@
 		<?php endif; ?>
         <?php if ( ! empty($comments_by_type['pings']) ) : ?>
             <div class="trackbacks-list">
-                <h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'mammoth') : __('<span>One</span> Trackback', 'mammoth'), $ping_count) ?></h3>
+                <h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'minimal-wp') : __('<span>One</span> Trackback', 'minimal-wp'), $ping_count) ?></h3>
                 <ol>
 	                <?php wp_list_comments('type=pings&callback=custom_pings'); ?>
                 </ol>				

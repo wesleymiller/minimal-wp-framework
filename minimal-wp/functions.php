@@ -11,7 +11,7 @@ function remove_attach_rel_attr($content) { return preg_replace('/\s+rel="attach
 add_filter('the_content', 'remove_attach_rel_attr');
 /*------------------------------------------------------------------------------*/
 /* Custom Menu -----------------------------------------------------------------*/
-function register_custom_menu() { register_nav_menu('navigation', __('Navigation', 'mammoth')); }
+function register_custom_menu() { register_nav_menu('navigation', __('Navigation', 'minimal-wp')); }
 add_action('init', 'register_custom_menu');
 /*------------------------------------------------------------------------------*/
 /* Theme Support ----------------------------------------------------------------*/
@@ -20,7 +20,7 @@ add_theme_support( 'custom-header', array('header-text' => false,	'flex-height' 
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' )  );
 add_theme_support( 'post-thumbnails' ); 
 set_post_thumbnail_size( 150, 150 );
-load_theme_textdomain( 'mammoth', get_template_directory() . '/languages' );
+load_theme_textdomain( 'minimal-wp', get_template_directory() . '/languages' );
 $locale = get_locale();
 $locale_file = get_template_directory() . "/languages/$locale.php";
 if ( is_readable($locale_file) ) { require_once($locale_file); }
@@ -55,20 +55,20 @@ function custom_comments($comment, $args, $depth) {
 	?>
 	<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
 	<div class="comment-author vcard"><?php commenter_link() ?></div>
-	<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'mammoth'),
+	<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s <span class="meta-sep">|</span> <a href="%3$s" title="Permalink to this comment">Permalink</a>', 'minimal-wp'),
 	get_comment_date(),
 	get_comment_time(),
 	'#comment-' . get_comment_ID() );
-	edit_comment_link(__('Edit', 'mammoth'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
-	<?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'mammoth') ?>
+	edit_comment_link(__('Edit', 'minimal-wp'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
+	<?php if ($comment->comment_approved == '0') _e("\t\t\t\t\t<span class='unapproved'>Your comment is awaiting moderation.</span>\n", 'minimal-wp') ?>
 	<div class="comment-content">
 	<?php comment_text() ?>
 	</div>
 	<?php
 	if($args['type'] == 'all' || get_comment_type() == 'comment') :
 	comment_reply_link(array_merge($args, array(
-	'reply_text' => __('Reply','mammoth'),
-	'login_text' => __('Log in to reply.','mammoth'),
+	'reply_text' => __('Reply','minimal-wp'),
+	'login_text' => __('Log in to reply.','minimal-wp'),
 	'depth' => $depth,
 	'before' => '<div class="comment-reply-link">',
 	'after' => '</div>'
@@ -80,12 +80,12 @@ function custom_pings($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 	?>
 	<li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
-	<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'mammoth'),
+	<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'minimal-wp'),
 	get_comment_author_link(),
 	get_comment_date(),
 	get_comment_time() );
-	edit_comment_link(__('Edit', 'mammoth'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
-	<?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'mammoth') ?>
+	edit_comment_link(__('Edit', 'minimal-wp'), ' <span class="meta-sep">|</span> <span class="edit-link">', '</span>'); ?></div>
+	<?php if ($comment->comment_approved == '0') _e('\t\t\t\t\t<span class="unapproved">Your trackback is awaiting moderation.</span>\n', 'minimal-wp') ?>
 	<div class="comment-content">
 	<?php comment_text() ?>
 	</div>

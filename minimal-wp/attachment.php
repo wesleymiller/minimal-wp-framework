@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <section class="attachment-content content">
 	<?php the_post(); ?>
-    <h1 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'mammoth' ), esc_html( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><span class="meta-nav">&laquo; </span><?php echo get_the_title($post->post_parent) ?></a></h1>
+    <h1 class="page-title"><a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'minimal-wp' ), esc_html( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><span class="meta-nav">&laquo; </span><?php echo get_the_title($post->post_parent) ?></a></h1>
     <article<?php post_class(); ?>>				
         <h2 class="post-title"><?php the_title(); ?></h2>
         <aside class="post-data">
-            <span class="meta-prep meta-prep-author"><?php _e('By ', 'mammoth'); ?></span><span class="author vcard"><a class="url fn n" href="<?php echo get_author_posts_url( false, $authordata->ID, $authordata->user_nicename ); ?>" title="<?php printf( __( 'View all posts by %s', 'mammoth' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
+            <span class="meta-prep meta-prep-author"><?php _e('By ', 'minimal-wp'); ?></span><span class="author vcard"><a class="url fn n" href="<?php echo get_author_posts_url( false, $authordata->ID, $authordata->user_nicename ); ?>" title="<?php printf( __( 'View all posts by %s', 'minimal-wp' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
             <span class="meta-sep"> | </span>
-            <span class="meta-prep meta-prep-post-date"><?php _e('Published ', 'mammoth'); ?></span><span class="post-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
-            <?php edit_post_link( __( 'Edit', 'mammoth' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t" ) ?>
+            <span class="meta-prep meta-prep-post-date"><?php _e('Published ', 'minimal-wp'); ?></span><span class="post-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
+            <?php edit_post_link( __( 'Edit', 'minimal-wp' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t" ) ?>
         </aside>
         <div class="post-content">	
             <div class="post-attachment">
@@ -19,8 +19,8 @@
                 <?php endif; ?>
             </div>
             <aside class="post-caption"><?php if ( !empty($post->post_excerpt) ) the_excerpt() ?></div>
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'mammoth' )  ); ?>
-                <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'mammoth' ) . '&after=</div>') ?>
+				<?php the_content( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'minimal-wp' )  ); ?>
+                <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'minimal-wp' ) . '&after=</div>') ?>
             </aside>
         </article>
 </section>
